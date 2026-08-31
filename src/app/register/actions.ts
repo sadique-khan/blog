@@ -1,6 +1,6 @@
 "use server";
 
-import { prisma } from "@/src/lib/prisma";
+import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { redirect } from "next/navigation";
 
@@ -30,5 +30,5 @@ export async function registerUser(formData:FormData) {
         },
     });
 
-    redirect("/login");
+    redirect("/");
 }
