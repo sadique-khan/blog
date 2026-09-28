@@ -1,10 +1,9 @@
+import { LoginForm } from "./LoginForm";
 
-import { RegisterForm } from "./register-form";
-
-export default function RegisterPage() {
+export default function LoginPage() {
     return (
         <main className="flex min-h-screen items-center justify-center bg-zinc-950 p-4">
-            <RegisterForm />
+            <LoginForm />
         </main>
     );
 }

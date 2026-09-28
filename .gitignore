@@ -78,3 +78,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# manul
+seed.ts
+data.txt

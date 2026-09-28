@@ -1,21 +1,18 @@
 import { auth } from "@/auth";
-import BlogCard from "@/components/ui/blogCard";
 import BlogList from "@/components/ui/blogList";
 import { redirect } from "next/navigation";
 
 
-export default async function Home() {
+export default async function Blogs({searchParams}:{searchParams:{query?:string}}) {
 
   const session = await auth();
 
   if (!session?.user){
     redirect('/login')
-  }else{
-    redirect('/blogs')
   }
   return (
-    <div>
-      <BlogList/>
+    <div className="pt-20 pb-10">
+      <BlogList searchParams={await searchParams}/>
     </div>
   );
 }
